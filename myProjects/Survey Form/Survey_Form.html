@@ -1,0 +1,172 @@
+<head>
+    <title>Survey Form</title>
+    <script src="surveyFormCode.js"></script>
+    <link rel="stylesheet"  href="surveyForm.css"/>
+</head>
+<header>    
+    <button onclick="changeColor();">Change color</button>
+</header>
+
+<body id="body">
+            
+    <h1 id="title">TITANFALL 2 OPINION SURVEY</h1>
+    <h2 id="description">Tell us what you like about the game</h2>
+    <form id="survey-form">
+        <!-- Name bar -->
+        <div class="form-group">
+            <label id="name-label" for="name">Name:</label><br><br>
+            <input  id="name" type="text" class="form-control" placeholder="Enter your name" required>
+            <br><br>
+        </div>
+
+        <!-- Email bar -->
+        <div class="form-group">
+            <label id="email-label" for="email">Email: </label><br><br>
+            <input  id="email" name="email" type="email" class="form-control" placeholder="Enter your e-mail address" required>
+            <br><br>
+        </div>
+
+        <!-- Age bar -->
+        <div class="form-group">
+            <label id="number-label" for="number">Age: <span class="clue">(optional)</span></label><br><br>
+            <input  id="number" name="age" type="number" min="18" max="99" class="form-control" placeholder="Enter you age" required>
+            <br><br>
+        </div>
+
+        <!-- Dropdown for Main Titan -->
+        <div class="form-group">
+            <label id="titan-label" for="titan">Which titan do you main?</label><br><br>
+            <select id="dropdown" name="titan" class="form-control" required>
+                <option disabled selected value>Select your main Titan</option>
+                <option value="ion">Ion</option>
+                <option value="legion">Legion</option>
+                <option value="monarch">Monarch</option>
+                <option value="northstar">Northstar</option>
+                <option value="ronin">Ronin</option>
+                <option value="scorch">Scorch</option>
+                <option value="tone">Tone</option>
+            </select>
+            <br><br>
+        </div>
+
+        <!-- Playstyle radio -->
+        <div class="form-group">
+            <p>Choose your favorite playstyle:</p><br>
+            <label for="play-style">  
+                <input id="play-style" type="radio" value="rushing" name="rushing-camping" class="input-radio" checked>Rushing
+            </label><br>
+            <label>
+                <input id="play-style" type="radio" value="camping" name="rushing-camping" class="input-radio">Camping
+            </label><br><br>
+        </div>
+
+        <!--Weapon form -->
+        <div class="form-group weapons">
+            <p>Choose your favorite primary weapons:</p>
+            <p>Asault Rifles</p>
+            <label>
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">R-201 Carbine    
+                <img class="checklist-previews" src="https://bit.ly/3wrJqxW">
+            </label><br>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">Hemlock BF-R
+                <img class="checklist-previews" src="https://bit.ly/3wwvdzy">
+            </label><br>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">G2A5
+                <img class="checklist-previews" src="https://bit.ly/3H3mgCR">
+            </label><br>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">V-47 Flatline
+                <img class="checklist-previews" src="https://bit.ly/3mYIdLh">
+            </label><br>
+            <p>Submachine Guns</p>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">CAR
+                <img class="checklist-previews" src="https://bit.ly/3qqk5Dt">
+            </label><br>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">Alternator
+                <img class="checklist-previews" src="https://bit.ly/3c0iKuw">
+            </label><br>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">R-97 Compact SMG
+                <img class="checklist-previews" src="https://bit.ly/3mVlzDE">
+            </label><br>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">Volt
+                <img class="checklist-previews" src="https://bit.ly/31EMTxD">
+            </label><br>
+            <p>Light Machine Guns</p>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">Spitfire
+                <img class="checklist-previews" src="https://bit.ly/3ofHu7N">
+            </label><br>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">L-STAR
+                <img class="checklist-previews" src="https://bit.ly/3qrACat">
+            </label><br>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">X-55 Devotion
+                <img class="checklist-previews" src="https://bit.ly/3mYJ6Uj">
+            </label><br>
+            <p>Sniper Rifles</p>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">Kraber-AP Sniper
+                <img class="checklist-previews" src="https://bit.ly/3FcF2G2">
+            </label><br>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">D-2 Double Take
+                <img class="checklist-previews" src="https://bit.ly/3D01Nwt">
+            </label><br>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">Longbow-DMR
+                <img class="checklist-previews" src="https://bit.ly/3F1He34">
+            </label><br>
+            <p>Shotguns</p>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">Mastiff
+                <img class="checklist-previews" src="https://bit.ly/30fMbqr">
+            </label><br><label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">EVA-8 Shotgun
+                <img class="checklist-previews" src="https://bit.ly/3bWweaM">
+            </label><br>
+            <p>Grenadiers</p>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">Sidewinder SMR
+                <img class="checklist-previews" src="https://bit.ly/3H3s4fJ">
+            </label><br>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">EPG-1
+                <img class="checklist-previews" src="https://bit.ly/31Lk9n7">
+            </label><br>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">R-6P Softball
+                <img class="checklist-previews" src="https://bit.ly/3km42md">
+            </label><br>
+            <label> 
+                <input name="favorite" value="favorite" type="checkbox" class="input-checkbox">EM-4 Cold War
+                <img class="checklist-previews" src="https://bit.ly/2YyG1AW">
+            </label><br>
+        </div>
+
+        <!-- Text box for comments-->
+        <div class="form-group">
+            <p>Placeholder additional comments area</p>
+            <textarea name="comments" id="commentArea" class="form-control" placeholder="Enter your comments here"></textarea><br>
+        </div>
+        
+        <!-- Submit button -->
+        <div class="form-group">
+        <button type="submit" id="submit" class="submit-button" onclick="submissionAccepted();">Submit</button>
+        </div> 
+
+
+                
+    </form>
+
+
+</body>
+<footer>
+
+</footer>

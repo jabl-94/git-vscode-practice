@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Currency converter</title>
+    <script src="currencyConverter.js"></script>
+    <link rel="stylesheet"  href="currencyConverter.css"/>
+</head>
+<header>
+    
+</header>
+<body>
+    <div class="box">
+        <h1>Currency converter</h1>
+        <div>
+            <label>Which currency do you want to convert?</label><br><br>
+            <input  id="euroDollar"  type="button" value="Euro to Dollar">
+            <input  id="euroBolivar"  type="button" value="Euro to Bolivar">
+            <input  id="dollarEuro"  type="button" value="Dollar to Euro"><br><br>
+            <input  id="dollarBolivar"  type="button" value="Dollar to Bolivar">            
+            <input  id="bolivarDollar"  type="button" value="Bolivar to Dollar">
+            <input  id="bolivarEuro"  type="button" value="Bolivar to Euro">
+            <br><br>
+        </div>
+        <div>
+            <label>Convertion rate:</label><br><br>
+            <input  type="text"
+                    id="convertionRate"
+                    readonly="readonly">
+            <br><br>
+        </div>
+        <div>
+            <label id="amountLabel">Amount to convert:</label><br><br>
+            <input  type="text"
+                    id="amount"
+                    placeholder="please type in the amount"/>
+            <br><br>
+        </div>
+        <div>
+            <input  type="button"
+                    id="Convert"
+                    value="Convert"/>
+            <br><br>
+        </div>
+        <div>
+            <label>Result</label><br>
+            <input  type="text"
+                id="result"
+                readonly="readonly">  
+        </div>
+    </div>
+
+
+<!--
+        <input type="text"
+               id="valuta"/> Valuta
+        <input type="text"
+               id="fattore"/> Fattore di conversione
+        <input type="button"
+               id="imposta"
+               value="Imposta"/>
+        <br />
+        <input type="text"
+               id="importo"/> Importo da convertire
+        <input type="button"
+               id="converti"
+               value="Converti"/>
+        <br />
+        <input type="text"
+               id="risultato"
+               readonly="readonly"/> Importo convertito
+-->
+    
+</body>
+
+</html>

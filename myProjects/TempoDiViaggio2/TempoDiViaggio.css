@@ -1,0 +1,61 @@
+body    {
+    background-color: lightgray;
+}
+
+footer  {
+    border-style: solid; 
+    border-color:lightslategrey; 
+    border-width: 5px; 
+    padding: 0% 0% 2.5% 45%; 
+    border-radius: 20px;
+    padding: 5px 5px 10px 5px; 
+    background-color: darkgray;
+    width: 50%; 
+    margin: auto;
+    position: relative;
+    top: 40px;
+}
+
+.box    {
+    border-style: solid; 
+    border-color:lightslategrey; 
+    border-width: 5px; 
+    padding: 0% 0% 2.5% 45%; 
+    border-radius: 20px;
+    padding: 10px 10px 20px 10px; 
+    background-color: darkgray;
+    width: 50%; 
+    margin: auto;
+    position: relative;
+    top: 40px;
+}
+
+label   {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif\;
+}
+
+select  {
+    min-width: 200px;
+}
+
+#distanza   {
+    text-align: right;
+}   
+
+
+#tempo   {
+    text-align: right;
+}   
+
+#messaggioErrore    {
+    font-size: 20px;
+    background-color: black;
+    color: yellow;
+}
+
+#messaggioAvvertenza    {
+    color: yellow;
+    font-size: 20px;
+    background-color: black;
+}

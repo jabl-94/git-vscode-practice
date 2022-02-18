@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- these links allow me to import a font from the google library to my code which use can be seen in h2-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+
+<!-- 'style' let's you modify the text in many ways, not just the color-->
+<!-- classes allow us to allocate a rule to a '.something' and putting them in the text (see h1)-->
+<!-- it's best practice to include a second font in case the first one isn't supported by the browser -->
+<!-- border margin settings overwrite those of the image itself, so no need to config them twice-->
+<!-- border radius makes corners rounder-->
+<!-- type= '' or (attribute=value) affects shit with that attibute in your code-->
+<!-- the BODY can be modified like any other element, and we can modify the elemets inside it too BUT CLASSES override the body declarations6-->
+<body>
+    <style>
+        
+        .dck    {
+            color: black; 
+            text-align: center; 
+            font-size: 100px; 
+            font-family:'Crimson Text', serif;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        h2      {
+            text-align: center; 
+            font-family: 'Crimson Text', serif; 
+            font-size: 50px;
+            text-transform: capitalize;
+        }
+        p       {
+            font-family: 'Crimson Text', serif; 
+            font-size: 30px;
+        }
+        a:hover{
+            color:rgb(255, 21, 0);
+        }
+        .imgsz  {
+            width: 75%; 
+            align-items: center;
+            opacity: 0.7;
+        }
+        .brdr   {
+            display: block; 
+            margin-left: auto; 
+            margin-right: auto;
+            border-color: teal; 
+            border-width: 20px; 
+            border-style: solid; 
+            border-radius:50px;
+            box-shadow: 50px 50px 50px rgba(0,0,0,0.25), 25px 25px 25px rgba(0,0,0,0.50);
+        }
+        #titans {
+            /*background: repeating-linear-gradient(
+                45deg,
+                yellow 0px,
+                yellow 40px,
+                black 40px,
+                black 80px
+            );*/
+            background-color: #FF0000;
+            line-height: 25px;
+        }
+        #rdck   {
+            background-color: #ff0; 
+            padding: 0% 23% 2.5% 45%;
+            border-style: solid;
+            border-color: blue; 
+            border-width: 10px; 
+            border-radius: 20px;
+        }
+        .box    {
+            border-style: solid; 
+            border-color:lightslategrey; 
+            border-width: 10px; 
+            padding: 0% 0% 2.5% 45%; 
+            border-radius: 20px;
+        }
+        .pss    {
+            text-align: center;
+        }
+        .position {
+            position: relative;
+            top: 40px;
+        }
+        
+        li      {
+            font-family: 'Crimson-text', serif;
+            /*display:inline;*/
+        }
+        
+        li:hover    {
+            transform: scale(1.5);
+            animation-name: list-color;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes  list-color {
+            100% {
+                color: #ff0;
+            }
+        }
+
+        .grnbx  {
+            padding: 10px; 
+            background-color: darkgreen; 
+            margin: auto; 
+            width: 90%;
+        }
+ 
+        .slvrbx {
+            padding: 10px 10px 20px 10px; 
+            background-color: darkgray;
+            width: 50%; 
+            margin: auto;
+            position: relative;
+            top: 40px;
+            /*transform: scale(2);*/
+        }
+        [type='radio'] {
+            margin: 20px 0px 20px 0px;
+        }
+
+        [type='checkbox'] {
+            margin: 20px 0px 20px 0px;
+        }
+
+        audio {
+            justify-self: center;
+        }
+
+        body    {
+            color: darkblue; 
+            background: linear-gradient(180deg, #FF0000, #00FFFF);
+            /*Complementary colors*/
+            /*red (#FF0000) and cyan (#00FFFF)*/
+            /*green (#00FF00) and magenta (#FF00FF)*/
+            /*blue (#0000FF) and yellow (#FFFF00)*/
+        }
+              
+    </style>
+
+    <!--Instead of specifying an element's padding   or margin try:
+        E.g: padding: 10px 20px 10px 20px;
+        E.g: margin:  10px 20px 10px 20px;
+        These four values work like a clock: top, right, bottom, left, and will produce the exact same result 
+        as using the side-specific padding instructions.-->
+
+    <div>
+    <!--headers and paragraphs -->
+    
+        <h1 class="dck box grnbx">Titanfall 2</h1>
+
+        <h2 class="box slvrbx">Fan page demo</h2>
+    
+        <p class="pss position" style="font-size: 30px;"><a href="#footer">Jump to Bottom</a></p><br>
+
+        <!--images need a source that can be from either a link or a local folder in your PC
+        , the Alt tag is text that shows up if the image fails to load (not needed if the image is purely decorative)-->
+        
+        <!--Nesting your img tags inside an anchor turns them into links-->  
+        
+        <a href="D:/Images/maxresdefault.jpg"><img class="imgsz brdr" src="D:/Images/maxresdefault.jpg" alt="Titanfall 2 Wallpaper"></a><br>
+
+        
+        <!--You can use a (anchor) elements to link to content outside of your web page.
+        They can also be used to link to other parts of your website itself (see 2nd one)...
+        You can also nest more anchors inside p tags-->
+        <p  class="pss p">visit the game's <a target="_blank" href="https://www.ea.com/games/titanfall/titanfall-2">website</a></p><br><br>
+
+        
+        <!--main tags help search engines look for specific shit, getting elements inside it is called nesting-->
+        <main> 
+        <p class="pss">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your 
+            ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+        
+        <p class="pss">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the
+           couch sleep in the sink fluffy fur catnip scratched.</p>
+        
+        <div id="titans" class="box">
+        <p class="p" style="font-size: 160%; margin-left: -40px;">List of <strong>Titans</strong> available:</p>
+        <!--ul are unordered lists and ol are ordered lists. They both contain li tags in them to make the lists-->
+        <!--the style of 'list-style-position: inside' makes the go to the center but it doesn't justify them in there-->
+        <nav>
+            <ul style="list-style-position: inside">
+                <li><a target="_blank" href="https://titanfall.fandom.com/wiki/Scorch">Scorch</a></li>
+                <li><a target="_blank" href="https://titanfall.fandom.com/wiki/Ion">Ion</a></li>
+                <li><a target="_blank" href="https://titanfall.fandom.com/wiki/Ronin">Ronin</a></li>
+                <li><a target="_blank" href="https://titanfall.fandom.com/wiki/Monarch">Monarch</a></li>
+                <li><a target="_blank" href="https://titanfall.fandom.com/wiki/Legion">Legion</a></li>
+                <li><a target="_blank" href="https://titanfall.fandom.com/wiki/Northstar">Northstar</a></li>
+                <li><a target="_blank" href="https://titanfall.fandom.com/wiki/Tone">Tone</a></li>
+            </ul>
+        </nav>
+
+        <p class="p" style="font-size: 150%; margin-left: auto;">Most hated titans:</p>
+            <ol   style="list-style-position: inside">
+                <nav>
+                    <li><a target="_blank" href="https://titanfall.fandom.com/wiki/Scorch">Scorch</a></li>
+                    <li><a target="_blank" href="https://titanfall.fandom.com/wiki/Ion">Ion</a></li>
+                    <li><a target="_blank" href="https://titanfall.fandom.com/wiki/Ronin">Ronin</a></li>
+                </nav>
+            </ol>
+        </div> 
+            
+        <div id="form">        
+        <!--Form tags allow you to submit info to a server by writing the link in the action section where the hashtag is-->      
+        <form id="rdck" action="#">    
+            
+            <!--input tags allow users to input stuff, in this case we want text-->
+            <!--by putting "Required" it makes the field a necessary one before submission-->
+            <p   class="p" style="font-size: 200%; margin-bottom: 0%; margin-left: auto;">Please indicate which <s>Gundam</s> Titan you hate:</p><hr>
+            <input type="text" placeholder="Name the Titan you hate" required><br>
+            
+            <!--label tags help tech find stuff faster by searching for id-->
+            <!--inputs of radio type create buttons that will automatically change 
+                when selectinig the other with the same "name", The names must be separated by a hyphen-->
+            <!--Radios and checkboxes require a value tag in order to send that info to the server, if no value is given, 
+                the value sent to the server is 'on', which ain't helpful-->
+            <!--by adding 'checked' to the radio or checkbox, it makes the option checked by default-->
+            <label for="piloting">
+                <input id="piloting" type="radio" value="piloting"  name="auto titan-piloting" checked>Piloting
+            </label>
+            
+            <label for="autotitan">
+                <input id="autotitan" type="radio" value="autotitan" name="auto titan-piloting">Auto-Titan
+            </label><br>
+       
+            <!--this is a checkbox, they work similar to radio, but they allow you to select all of them anyway-->
+            <legend class="p" style="font-size: 200%; margin-bottom: 0%;  margin-left: auto;">Please <em>choose</em> your <u>favorite</u> type of gun(s):</legend>
+
+            <label for="none">
+                <input id="none" value="none" type="checkbox" name="gun type"> None
+            </label>
+            <label for="sniper">
+                <input id="sniper" value="sniper" type="checkbox" name="gun type"> Sniper
+            </label>
+            <label for="assaultrifle">
+                <input id="assaultrifle" value="assaultrifle" type="checkbox" name="gun type"> Assault Rifle
+            </label><label for="shotgun">
+                <input id="shotgun" value="shotgun" type="checkbox" name="gun type"> Shotgun
+            </label>
+            <label for="smg">
+                <input id="smg" value="smg" type="checkbox" name="gun type"> SMG
+            </label>
+            <label for="pistol">
+                <input id="pistol" value="pistol" type="checkbox" name="gun type"> Pistol
+            </label><br>
+        
+            <button type="submit">Submit</button>
+            
+        
+        </form>
+        </div>
+
+        <audio id="englishAudio" controls>
+            <source src="D:/Brit. inst/Audio tracks/B1+ Outcomes Student's Book/CD1/01-AudioTrack 01.mp3" type="audio/mpeg">
+        </audio>
+
+        </main>
+
+        <footer style="text-align: center;" id="footer">copyright: me</footer>    
+    </div>
+    
+</body>
+</html>

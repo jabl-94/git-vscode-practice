@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Time Calculator</title>
+    <script src="TempoDiViaggio.js"></script>
+    <link rel="stylesheet"  href="TempoDiViaggio.css"/>
+</head>
+
+<body>
+    <div class="box">
+        <div id="title">
+            <h1>Calcolatore tempo di percorrenza</h1>
+            <h2>Scopri il tempo di percorrenza scegliendo tra 7 diverse destinazioni turistiche italiane</h2>
+            <br>
+            <br>
+        </div>
+        <div id="startingPoint">
+            <label>Da dove parti?</label>
+            <br>
+            <select id="whereFrom" name="startingPoint" class="form-control" required>
+                <option selected value="whereFrom">Partenza</option>
+                <option value="pisa">Pisa</option>
+                <option value="roma">Roma</option>
+                <option value="milano">Milano</option>
+                <option value="firenze">Firenze</option>
+                <option value="venezia">Venezia</option>
+                <option value="trieste">Trieste</option>
+                <option value="napoli">Napoli</option>
+            </select>
+            <br>
+            <br>
+        </div>
+        <div id="destination">
+            <label>A dove vai?</label>
+            <br>
+            <select id="whereTo" class="form-control" required>
+                <option selected value="whereTo">Destinazione</option>
+                <option value="pisa">Pisa</option>
+                <option value="roma">Roma</option>
+                <option value="milano">Milano</option>
+                <option value="firenze">Firenze</option>
+                <option value="venezia">Venezia</option>
+                <option value="trieste">Trieste</option>
+                <option value="napoli">Napoli</option>
+            </select>
+            <br>    
+            <br>
+        </div>
+        <div id="distance">
+            <label>Distanza tra le due città:</label>
+            <br>
+            <input id="distanza" readonly="readonly">Km
+            <br>
+            <br>
+            <span id="messaggioErrore"></span>
+            <br>
+            <br>
+        </div>
+        <div id="travel">
+            <label>Scegli il mezzo di percorrenza:</label>
+            <br>
+            <input id="macchina" type="button" value="Viaggio in macchina">            
+            <br>
+            <input id="treno" type="button" value="Viaggio in treno">
+            <br>
+            <br>
+        </div>
+        <div id="time">
+            <label>Tempo di viaggio:</label>
+            <br>
+            <input id="tempo" readonly="readonly">minuti
+            <br>
+            <span id="messaggioAvvertenza"></span>
+            <br>
+        </div>
+    </div>
+    <footer>
+        <p>Destinazioni presse da <a target="_blank" href="https://www.travel365.it/classifica-citta-piu-belle-d-italia.htm">Travel365.it</a> </p>
+    </footer>
+</body>
+
+
+</html>

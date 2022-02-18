@@ -1,0 +1,59 @@
+body    {
+    background-color: rgb(46, 131, 117);
+}
+
+
+.form-control   {
+    width: 100%;
+}
+
+.form-group {
+    font-size: 20px;
+}
+
+#survey-form    {
+    padding: 50px 100px 50px 100px;
+    background-color: lightsteelblue;
+    margin: 50px 200px 50px 200px;
+}
+
+#title  {
+    text-align: center;
+    font-size: 50px;
+}
+
+#description    {
+    text-align: center;
+    font-size: 30px;
+}
+
+.submit-button  {
+    width: 100%;
+}
+
+<!-- .checklist-previews  { 
+    width: 50%;
+    height: 50%;            
+} -->
+
+.weapons label img  {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 300px;
+    height: auto;
+    margin-left: -300px;
+    border-color: rgb(2, 101, 248); 
+    border-width: 10px; 
+    border-style: solid; 
+    border-radius:50px;
+    background-color: rgb(192, 182, 182); 
+}
+
+.weapons label:hover img  {
+    display: flex;                        
+}
+
+#commentArea    {
+    min-height: 100px;
+}        
