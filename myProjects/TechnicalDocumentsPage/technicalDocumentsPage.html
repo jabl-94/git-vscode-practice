@@ -1,0 +1,352 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Technical Documents Page</title>
+    <link rel="stylesheet"  href="technicalDocumentsPage.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Github guide</header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#Introduction">Introduction</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Installing_Git_for_Windows">Installing Git for Windows</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Creating_a_repository">Creating a repository</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Creating_a_branch">Creating a branch</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Making_and_committing_changes">Making and committing changes</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <sections class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>
+                    GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+
+                    This tutorial teaches you GitHub essentials like repositories, branches, commits, and pull requests. You'll create your own Hello World repository and learn GitHub's pull request workflow, a popular way to create and review code.
+                    
+                    In this quickstart guide, you will:
+                </p>
+                <ul>
+                    <li>Create and use a repository</li>
+                    <li>Start and manage a new branch</li>
+                    <li>Make changes to a file and push them to GitHub as commits</li>
+                    <li>Open and merge a pull request</li>
+                </ul>
+                <p>
+                    To complete this tutorial, you need a GitHub account and Internet access. You don't need to know how to code, use the command line, or install Git (the version control software that GitHub is built on).
+                </p>
+            </article>
+        </sections>
+        <sections class="main-section" id="Installing_Git_for_Windows">
+            <header>Installing Git for Windows</header>
+            <article>
+                <ol>
+                    <li>
+                        <p>
+                            Browse to the official Git website: <a target="_blank" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Click the download link for Windows and allow the download to complete.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Browse to the download location (or use the download shortcut in your browser). Double-click the file to extract and launch the installer.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Allow the app to make changes to your device by clicking <strong>Yes</strong> on the User Account Control dialog that opens.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Review the GNU General Public License, and when you’re ready to install, click <strong>Next</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The installer will ask you for an installation location. Leave the default, 
+                            unless you have reason to change it, and click <strong>Next</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            A component selection screen will appear. Leave the defaults unless you have a 
+                            specific need to change them and click <strong>Next</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The installer will offer to create a start menu folder. Simply click <strong>Next</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Select a text editor you’d like to use with Git. Use the drop-down menu to select Notepad++ 
+                            (or whichever text editor you prefer) and click <strong>Next</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The next step allows you to choose a different name for your initial branch. The default is 'master.' 
+                            Unless you're working in a team that requires a different name, leave the default option and click <strong>Next</strong>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            This installation step allows you to change the <strong>PATH environment</strong>. The <strong>PATH</strong> 
+                            is the default set of directories included when you run a command from the command line. Leave this on the middle (recommended) selection and click <strong>Next</strong>.                             
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The installer now asks which SSH client you want Git to use. Git already comes with its own SSH client, 
+                            so if you don't need a specific one, leave the default option and click <strong>Next</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The next option relates to server certificates. Most users should use the default. If you're working in an
+                             Active Directory environment, you may need to switch to Windows Store certificates. Click <strong>Next</strong>.                                                        
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The next selection converts line endings. It is recommended that you leave the default selection. 
+                            This relates to the way data is formatted and changing this option may cause problems. Click <strong>Next</strong>.             
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Choose the terminal emulator you want to use. The default MinTTY is recommended, for its features. Click <strong>Next</strong>.                       
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The installer now asks what the <code>git pull</code> command should do. The default option is recommended 
+                            unless you specifically need to change its behavior. Click <strong>Next</strong>. to continue with the installation.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Next you should choose which credential helper to use. Git uses credential helpers to fetch or save credentials. 
+                            Leave the default option as it is the most stable one, and click <strong>Next</strong>..                            
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The default options are recommended, however this step allows you to decide which extra option you would like to enable. 
+                            If you use symbolic links, which are like shortcuts for the command line, tick the box. Click <strong>Next</strong>..                                                        
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Depending on the version of Git you’re installing, it may offer to install experimental features. 
+                            At the time this article was written, the options to include support for pseudo controls and a built-in file system monitor 
+                            were offered. Unless you are feeling adventurous, leave them unchecked and click <strong>Install</strong>.                           
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Once the installation is complete, tick the boxes to view the Release Notes or Launch Git Bash, then click <strong>Finish</strong>.
+                        </p>
+                    </li>
+                </ol>
+            </article>
+        </sections>
+        <sections class="main-section" id="Creating_a_repository">
+            <header>Creating a repository</header>
+            <article>
+                <p>
+                    A repository is usually used to organize a single project. 
+                    Repositories can contain folders and files, images, videos, spreadsheets, and data sets -- anything your project needs. 
+                    Often, repositories include a <code>README</code> file, a file with information about your project. 
+                    GitHub makes it easy to add one at the same time you create your new repository. 
+                    It also offers other common options such as a license file.
+                </p>
+                <p>
+                    Your <code>hello-world</code>> repository can be a place where you store ideas, resources, or even share and discuss things with others.
+                </p>
+                <ol>
+                    <li>
+                        <p>
+                            In the upper-right corner of any page, use the  drop-down menu, and select New repository.
+                        </p>
+                        <img src="https://docs.github.com/assets/cb-11427/images/help/repository/repo-create.png" alt="Drop-down menu with option to create new repository">
+                    </li>
+                    <li>
+                        <p>
+                            In the Repository name box, enter <code>hello-world</code>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            In the "Description" box, write a short description.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Select "Add a README file".
+                        </p>
+                        
+                    </li>
+                    <li>
+                        <p>
+                            Click "Create repository".
+                        </p>
+                        <img src="https://docs.github.com/assets/cb-106696/images/help/repository/hello-world-repo.png" alt="Create a hello world repository">
+                    </li>
+                </ol>
+            </article>
+        </sections>
+        <sections class="main-section" id="Creating_a_branch">
+            <header>Creating a branch</header>
+            <article>
+                <p>
+                    Branching lets you have different versions of a repository at one time.
+                </p>
+                <p>
+                    By default, your repository has one branch named <code>main</code> that is considered to be the definitive branch. 
+                    You can use branches to experiment and make edits before committing them to <code>main</code>.
+                </p>
+                <p>
+                    When you create a branch off the <code>main</code> branch, you're making a copy, or snapshot, of main as it was at that point in time. 
+                    If someone else made changes to the <code>main</code> branch while you were working on your branch, you could pull in those updates.
+                </p>
+                <p>
+                    This diagram shows:
+                </p>
+                <ul>
+                    <li>
+                        <p>The <code>main</code> branch</p>
+                    </li>
+                    <li>
+                        <p>
+                            A new branch called <code>feature</code>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The journey that <code>feature</code> takes before it's merged into <code>main</code>
+                        </p>
+                        <img src="https://docs.github.com/assets/cb-27799/images/help/repository/branching.png" alt="branch graph">
+                    </li>
+                </ul>
+                <p>
+                    Have you ever saved different versions of a file? Something like:
+                </p>
+                <ul>
+                    <li>
+                        <p><code>story.txt</code></p>
+                    </li>
+                    <li>
+                        <p><code>story-joe-edit.txt</code></p>
+                    </li>
+                    <li>
+                        <p>
+                            <code>story-joe-edit-reviewed.txt</code>
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    Branches accomplish similar goals in GitHub repositories.
+                </p>
+                <p>
+                    Here at GitHub, our developers, writers, and designers use branches for keeping bug fixes and feature work separate from our <code>main</code> (production) branch. 
+                    When a change is ready, they merge their branch into <code>main</code>.
+                </p>                
+            </article>
+        </sections>
+        <section class="main-section" id="Create_a_branch">
+            <header>Create a branch</header>
+            <article>
+                <ol>
+                    <li>
+                        <p>
+                            Click the Code tab of your <code>hello-world</code> repository.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Click the drop down at the top of the file list that says <strong>main</strong>.
+                        </p>
+                        <img src="https://docs.github.com/assets/cb-6253/images/help/branch/branch-selection-dropdown.png" alt="Drop-down menu">
+                    </li>
+                    <li>
+                        <p>
+                            Type a branch name, <code>readme-edits</code>, into the text box.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Click <strong>Create branch: readme-edits from main</strong>.
+                        </p>
+                        <img src="https://docs.github.com/assets/cb-27418/images/help/repository/new-branch.png" alt="Create branch: readme-edits from main">
+                    </li>
+                </ol>
+                <p>
+                    Now you have two branches, <code>main</code> and <code>readme-edits</code>. Right now, they look exactly the same. Next you'll add changes to the new branch.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Making_and_committing_changes">
+            <header>Making and committing changes</header>
+            <p>
+                When you created a new branch in the previous step, GitHub brought you to the code page for your new <code>readme-edits</code> branch, 
+                which is a copy of <code>main</code>.
+            </p>
+            <p>
+                You can make and save changes to the files in your repository. On GitHub, saved changes are called commits. 
+                Each commit has an associated commit message, which is a description explaining why a particular change was made. 
+                Commit messages capture the history of your changes so that other contributors can understand what you’ve done and why.
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        Click the <code>README.txt</code> file.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Click the <strong>pencil icon</strong> to edit the file.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        In the editor, write a bit about yourself.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        In the Commit changes box, write a commit message that describes your changes.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Click Commit changes.
+                    </p>
+                    <img src="https://docs.github.com/assets/cb-75138/images/help/repository/first-commit.png" alt="">
+                </li>
+            </ol>
+            <p>
+                These changes will be made only to the README file on your <code>readme-edits</code> branch, 
+                so now this branch contains content that's different from <code>main</code>.
+            </p>
+            <h2>To be continued...</h2>
+        </section>
+    </main>
+
+</body>
